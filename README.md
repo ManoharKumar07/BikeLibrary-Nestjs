@@ -111,18 +111,3 @@ Here are some sample JSON data to help you test the API via Swagger:
   ```bash
   npm run start:prod
   ```
-
-## Testing
-
-You can also run tests for the application:
-
-```bash
-# Unit tests
-npm run test
-
-# End-to-end tests
-npm run test:e2e
-
-# Test coverage
-npm run test:cov
-```
