@@ -3,27 +3,27 @@ import { BikeService } from './bike.service';
 import { CreateBikeDto } from './dto/create-bike.dto';
 import { UpdateBikeDto } from './dto/update-bike.dto';
 
-@Controller('bikes') // This decorator defines the route prefix for all endpoints in this controller
+@Controller('bikes') 
 export class BikeController {
-  constructor(private readonly bikesService: BikeService) {} // The constructor injects the BikeService to use its methods
+  constructor(private readonly bikesService: BikeService) {}
 
-  @Get() // This decorator handles GET requests to the '/bikes' endpoint
+  @Get() 
   findAll() {
-    return this.bikesService.findAll(); // Calls the service method to retrieve all bikes
+    return this.bikesService.findAll(); 
   }
 
-  @Post() // This decorator handles POST requests to the '/bikes' endpoint
+  @Post()
   create(@Body() createBikeDto: CreateBikeDto) {
-    return this.bikesService.create(createBikeDto); // Calls the service method to create a new bike
+    return this.bikesService.create(createBikeDto); 
   }
 
-  @Put(':id') // This decorator handles PUT requests to the '/bikes/:id' endpoint, where ':id' is a variable parameter
+  @Put(':id') 
   update(@Param('id') id: string, @Body() updateBikeDto: UpdateBikeDto) {
-    return this.bikesService.update(id, updateBikeDto); // Calls the service method to update an existing bike by ID
+    return this.bikesService.update(id, updateBikeDto); 
   }
 
-  @Delete(':id') // This decorator handles DELETE requests to the '/bikes/:id' endpoint
+  @Delete(':id') 
   remove(@Param('id') id: string) {
-    return this.bikesService.remove(id); // Calls the service method to remove a bike by ID
+    return this.bikesService.remove(id); 
   }
 }
