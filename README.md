@@ -111,3 +111,14 @@ Here are some sample JSON data to help you test the API via Swagger:
   ```bash
   npm run start:prod
   ```
+
+person
+destination
+bike present in db
+weather
+
+// ❯ curl "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m" {"latitude":52.52,"longitude":13.419998,"generationtime_ms":0.029921531677246094,"utc_offset_seconds":0,"timezone":"GMT","timezone_abbreviation":"GMT","elevation":38.0,"current_units":{"time":"iso8601","interval":"seconds","temperature_2m":"°C","wind_speed_10m":"km/h"},"current":{"time":"2024-10-16T12:30","interval":900,"temperature_2m":13.4,"wind_speed_10m":17.1}}%
+
+```
+https://www.npmjs.com/package/@spurreiter/geocoder
+```

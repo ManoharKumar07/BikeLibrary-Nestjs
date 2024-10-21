@@ -1,6 +1,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { BikeModule } from './bike/bike.module';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+import { TripdetailsModule } from './tripdetails/tripdetails.module';
 
 @Module({
   imports: [
@@ -13,6 +16,9 @@ import { BikeModule } from './bike/bike.module';
     }),
     // Importing the BikeModule to manage bike-related features in the app
     BikeModule,
+    TripdetailsModule,
   ],
+  controllers:[AppController],
+  providers:[AppService]
 })
 export class AppModule {}
